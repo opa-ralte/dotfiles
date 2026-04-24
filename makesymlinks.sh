@@ -8,8 +8,8 @@
 #Variables
 ##########
 
-dir=~/dotfiles            # dotfiles directory
-olddir=~/dotfiles_old     # old dotfiles backup directory
+dir=~/.dotfiles            # dotfiles directory
+olddir=~/.dotfiles_old     # old dotfiles backup directory
 files="bashrc vimrc"  
 
 #########
@@ -29,7 +29,7 @@ for file in $files; do
   echo "Moving any existing dotfiles from ~ to $olddir"
   mv ~/.$file ~/dotfiles_old/  
   echo "Creating symlink to $file in home directory."  
-  ln -s $dir/$files ~/.$file  
+  ln -s $dir/$file ~/.$file  
 done
 
 
