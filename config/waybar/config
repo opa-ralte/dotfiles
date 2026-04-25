@@ -1,0 +1,95 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 4,
+
+    "modules-left": ["custom/arch", "sway/workspaces", "sway/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["backlight", "pulseaudio", "battery", "network", "sway/language", "tray"],
+
+    // ── Sway ────────────────────────────────────────────────────────────────
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{icon}",
+        "format-icons": {
+            "focused": "󱓻",
+            "default": "󱓼"
+        }
+    },
+    "sway/window": {
+        "rewrite": {
+            "": "sway"
+        }
+    },
+    "sway/language": {
+        "format": "󰣩 {}"
+    },
+
+    // ── Custom ───────────────────────────────────────────────────────────────
+    "custom/arch": {
+        "format": " arch-bebe",
+        "tooltip-format": "Am I a masochist? Yes!"
+    },
+
+    // ── Clock (interval 60 — no need to poll faster than the minute) ─────────
+    "clock": {
+        "interval": 60,
+        "format": "󰥔 {:%H:%M 󰃭 %a %Y-%m-%d}",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    // ── Backlight (event-driven via udev, interval is a fallback) ────────────
+    "backlight": {
+        "interval": 60,
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "reverse-scrolling": true,
+        "tooltip": false
+    },
+
+    // ── Audio (event-driven via PipeWire/PulseAudio) ─────────────────────────
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "default": ["󰖀", "󰖀", "󰕾"]
+        },
+        "reverse-scrolling": true,
+        "scroll-step": 3,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    // ── Battery (slow interval — capacity changes slowly) ────────────────────
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁿", "󰂀", "󰂂", "󰁹"],
+        "tooltip": false
+    },
+
+    // ── Network ──────────────────────────────────────────────────────────────
+    "network": {
+        "interval": 30,
+        "format-ethernet": "󰈀",
+        "format-wifi": "󰖩 {essid}",
+        "format-disconnected": "󰖪 off",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "Connected through {ifname} ({signalStrength}%)"
+    },
+
+    // ── Tray ─────────────────────────────────────────────────────────────────
+    "tray": {
+        "spacing": 8
+    }
+}

@@ -1,0 +1,99 @@
+@define-color mauve    #E0B0FF;
+@define-color red      #eb4034;
+@define-color lavender #E6E6FA;
+@define-color text     #CCCCCC;
+@define-color background #1a1a24;
+@define-color surface    #24243a;
+@define-color surface2   #2e2e45;
+
+* {
+    all: unset;
+    font-family: 'FiraCode Nerd Font', monospace;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    text-shadow: none;
+    background-color: transparent;
+}
+
+window {
+    all: unset;
+    padding: 18px;
+    border-radius: 0px;
+    background-color: @background;
+    border: 1px solid @surface2;
+}
+
+#outer-box {
+    background-color: @background;
+}
+
+#inner-box {
+    margin: 2px;
+    padding: 3px;
+    background-color: @background;
+}
+
+#scroll {
+    margin: 0px;
+    padding: 30px;
+    background-color: @background;
+}
+
+#input {
+    all: unset;
+    margin: 20px 20px 0px 20px;
+    padding: 12px 20px;
+    color: @text;
+    background-color: @surface;
+    border: 1px solid @surface2;
+    border-radius: 0px;
+    box-shadow: 0px 3px 7px rgba(10, 0, 30, 0.6);
+}
+
+#input image {
+    color: @red;
+    padding-right: 10px;
+    background-color: transparent;
+}
+
+#input * {
+    background-color: transparent;
+}
+
+#input:focus {
+    border: 1px solid @mauve;
+    background-color: @surface;
+}
+
+#text {
+    margin: 5px;
+    color: @text;
+    background-color: transparent;
+}
+
+#entry {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+#entry arrow {
+    color: @lavender;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: @surface2;
+    border-radius: 0px;
+    border: 1px solid @mauve;
+}
+
+#entry:selected #text {
+    color: @mauve;
+}
+
+#entry:drop(active) {
+    background-color: @surface2 !important;
+}

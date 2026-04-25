@@ -7,11 +7,10 @@
 
 #Variables
 ##########
-
 dir=~/.dotfiles            # dotfiles directory
 olddir=~/.dotfiles_old     # old dotfiles backup directory
-files="bashrc vimrc"  
-
+files="bashrc vimrc zshrc"  
+folders="btop dunst fastfetch kitty nvim sway swaylock waybar wofi yazi"
 #########
 
 # create dotfiles_old in homedir
@@ -30,6 +29,11 @@ for file in $files; do
   mv ~/.$file ~/dotfiles_old/  
   echo "Creating symlink to $file in home directory."  
   ln -s $dir/$file ~/.$file  
+done
+
+for entity in $folders; do
+  echo "Creating symlink to $entity in home directory."
+  ln -s $dir/config/$entity/ ~/.config/$entity
 done
 
 
