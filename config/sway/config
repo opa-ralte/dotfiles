@@ -15,6 +15,9 @@ font pango:monospace 0.001
 exec_always --no-startup-id waybar
 # run dunst
 exec_always dunst
+# widget for pavucontrol
+for_window [app_id="pavucontrol"] floating enable, resize set 550 px 600 px, move position center
+
 #######
 #     #
 #     #
