@@ -8,7 +8,7 @@
     "spacing": 4,
 
     "modules-left": ["custom/arch", "sway/workspaces", "sway/window"],
-    "modules-center": ["clock"],
+    "modules-center": ["idle_inhibitor", "clock"],
     "modules-right": ["backlight", "pulseaudio", "battery", "network", "sway/language", "tray"],
 
     // ── Sway ────────────────────────────────────────────────────────────────
@@ -34,6 +34,14 @@
     "custom/arch": {
         "format": " arch-bebe",
         "tooltip-format": "Am I a masochist? Yes!"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+          "activated": "☕", // Coffee icon for "on"
+          "deactivated": "💤" // Sleep icon for "off"
+        }
     },
 
     // ── Clock (interval 60 — no need to poll faster than the minute) ─────────
