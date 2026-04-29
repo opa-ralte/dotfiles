@@ -41,3 +41,13 @@ window#waybar {
 #mode {
     color: #f38ba8;
 }
+
+#idle_inhibitor {
+    padding: 0 10px;
+    color: #cc3436;
+}
+
+#idle_inhibitor.activated {
+    color: #66cc33;
+}
+

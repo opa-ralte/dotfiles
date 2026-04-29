@@ -39,8 +39,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-          "activated": "☕", // Coffee icon for "on"
-          "deactivated": "💤" // Sleep icon for "off"
+          "activated": "", // Coffee icon for "on"
+          "deactivated": "" // Sleep icon for "off"
         }
     },
 
