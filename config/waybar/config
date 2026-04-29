@@ -9,7 +9,7 @@
 
     "modules-left": ["custom/arch", "sway/workspaces", "sway/window"],
     "modules-center": ["idle_inhibitor", "clock"],
-    "modules-right": ["backlight", "pulseaudio", "battery", "network", "sway/language", "tray"],
+    "modules-right": ["custom/wallpaper", "backlight", "pulseaudio", "battery", "network", "sway/language", "tray"],
 
     // ── Sway ────────────────────────────────────────────────────────────────
     "sway/workspaces": {
@@ -34,6 +34,12 @@
     "custom/arch": {
         "format": " arch-bebe",
         "tooltip-format": "Am I a masochist? Yes!"
+    },
+
+    "custom/wallpaper": {
+      "format": "󰸉",
+      "tooltip": "Change wallpaper",
+      "on-click": "~/.dotfiles/config/waybar/scripts/wallpaper-next.sh"
     },
 
     "idle_inhibitor": {
