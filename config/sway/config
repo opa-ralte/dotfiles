@@ -41,7 +41,8 @@ set $menu wofi --show drun
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/a_city_skyline_at_night_01.jpg fill
-output * bg /home/opa/Downloads/walls/pixel-castle.png fill
+set $WALLPAPER_PATH /home/opa/.dotfiles/walls/pixel-castle.png 
+output * bg $WALLPAPER_PATH fill
 #
 # Example configuration:
 #
