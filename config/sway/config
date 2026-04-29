@@ -11,8 +11,6 @@ default_border pixel 2
 default_floating_border pixel 2
 # hide title bar text (sets font size to 0.001 to effectively hide it)
 font pango:monospace 0.001
-# always run waybar everytime sway starts
-exec_always --no-startup-id waybar
 # run dunst
 exec_always dunst
 # widget for pavucontrol
@@ -238,22 +236,9 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-# bar {
-#     position top
-#
-#     # When the status_command prints a new line to stdout, swaybar updates.
-#     # The default just shows the current date and time.
-#     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-#
-#     colors {
-#         statusline #ffffff
-#         background #323232
-#         inactive_workspace #32323200 #32323200 #5c5c5c
-#     }
-# }
+# status bar
+bar {
+  swaybar_command waybar
+}
 
 include /etc/sway/config.d/*
