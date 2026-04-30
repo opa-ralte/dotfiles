@@ -74,7 +74,7 @@
             "default": ["󰖀", "󰖀", "󰕾"]
         },
         "reverse-scrolling": true,
-        "scroll-step": 3,
+        "scroll-step": 1,
         "on-click": "pavucontrol",
         "tooltip": false
     },
