@@ -83,8 +83,10 @@ exec swayidle -w \
 #
 # Basics:
 #
+    # for screenshot clipboard  
+    bindsym $mod+Alt+Shift+s exec grimshot copy area
     # for emoji picker bemoji...
-    bindsym $mod+Alt+Shift+e exec bemoji -t
+    bindsym $mod+Alt+Shift+e exec wofi-emoji
     # to trigger yazi, a tui file manager
     bindsym $mod+Alt+e exec kitty yazi
     # to trigger the lock

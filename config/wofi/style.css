@@ -95,5 +95,5 @@ window {
 }
 
 #entry:drop(active) {
-    background-color: @surface2 !important;
+    background-color: @surface2;
 }

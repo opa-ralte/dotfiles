@@ -1,13 +1,13 @@
 [config]
 show=drun
 prompt=Search
-width=500
+width=400
 height=400
 columns=1
 allow_images=true
-image_size=32
+image_size=30
 term=kitty
 insensitive=true
 print_command=true
 hide_scroll=true
-no_actions=true
+no_actions=false
