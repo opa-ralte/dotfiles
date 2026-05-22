@@ -15,6 +15,13 @@ font pango:monospace 0.001
 exec_always dunst
 # widget for pavucontrol
 for_window [app_id="pavucontrol"] floating enable, resize set 550 px 600 px, move position center
+# widget for blueman-manager
+for_window [app_id="blueman-manager"] floating enable, resize set 550 px 600 px, move position center
+# for drives etc...
+# Example Sway startup config
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
 
 #######
 #     #
