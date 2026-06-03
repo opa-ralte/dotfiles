@@ -10,7 +10,7 @@
 dir=~/.dotfiles            # dotfiles directory
 olddir=~/.dotfiles_old     # old dotfiles backup directory
 files="bashrc vimrc zshrc"  
-folders="btop dunst fastfetch kitty sway swaylock waybar wofi yazi Thunar"
+folders="btop dunst fastfetch kitty sway swaylock waybar wofi yazi"
 #########
 
 # create dotfiles_old in homedir
