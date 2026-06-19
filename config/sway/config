@@ -5,6 +5,9 @@
 #     #
 #     #
 ####### user i.e custom configs... - opa ralte
+# workspace duh dan a ni mai maw bro...
+output HDMI-A-1 resolution 1360x768 position 0 0
+output eDP-1 resolution 1920x1080 position 0 768
 # hide title bars for new tiled windows
 default_border pixel 2
 # hide title bars for new floating windows
@@ -21,7 +24,8 @@ for_window [app_id="blueman-manager"] floating enable, resize set 550 px 600 px,
 # Example Sway startup config
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-
+# for obs
+exec --no-startup-id /usr/lib/xdg-desktop-portal -r
 
 #######
 #     #
@@ -91,6 +95,13 @@ exec swayidle -w \
 #
 # Basics:
 #
+    # for swiping across workspaces  
+    bindsym --whole-window $mod+button4 workspace prev  
+    bindsym --whole-window $mod+button5 workspace next  
+    # swipe left with 3 fingers to go to the next workspace  
+    bindgesture swipe:left workspace next  
+    # swipe right with 3 fingers to go the previous workspace  
+    bindgesture swipe:right workspace prev
     # for screenshot clipboard  
     bindsym $mod+Alt+Shift+s exec grimshot copy area
     # for emoji picker bemoji...
