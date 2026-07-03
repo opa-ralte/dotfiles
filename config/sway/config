@@ -5,6 +5,8 @@
 #     #
 #     #
 ####### user i.e custom configs... - opa ralte
+# cursor theme a ni mai maw...
+seat * xcursor_theme macOS 32
 # workspace duh dan a ni mai maw bro...
 output HDMI-A-1 resolution 1360x768 position 0 0
 output eDP-1 resolution 1920x1080 position 0 768
@@ -26,6 +28,8 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 # for obs
 exec --no-startup-id /usr/lib/xdg-desktop-portal -r
+# for network manager maw... 
+exec nm-applet --indicator
 
 #######
 #     #
@@ -95,6 +99,10 @@ exec swayidle -w \
 #
 # Basics:
 #
+    # for the calculator
+    bindsym XF86Calculator exec qalculate-gtk
+    # Force Qalculate to float, center, and resize
+    for_window [app_id="qalculate-gtk"] floating enable, move position center, resize set 600 px 400 px
     # for swiping across workspaces  
     bindsym --whole-window $mod+button4 workspace prev  
     bindsym --whole-window $mod+button5 workspace next  
