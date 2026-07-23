@@ -103,6 +103,11 @@ exec swayidle -w \
     bindsym XF86Calculator exec qalculate-gtk
     # Force Qalculate to float, center, and resize
     for_window [app_id="qalculate-gtk"] floating enable, move position center, resize set 600 px 400 px
+    # Force renaming in thuar to float, center and resize  
+    for_window [app_id="thunar" title="Rename"] floating enable
+    for_window [app_id="thunar" title="Bulk Rename"] floating enable
+    for_window [app_id="thunar" title=".*Progress.*"] floating enable
+    for_window [app_id="thunar" title=".*Confirm.*"] floating enable
     # for swiping across workspaces  
     bindsym --whole-window $mod+button4 workspace prev  
     bindsym --whole-window $mod+button5 workspace next  
