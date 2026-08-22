@@ -54,7 +54,7 @@ set $menu wofi --show drun
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/a_city_skyline_at_night_01.jpg fill
-set $WALLPAPER_PATH /home/opa/.dotfiles/walls/pixel-castle.png 
+set $WALLPAPER_PATH /home/opa/.dotfiles/walls/pixel-earth.png
 output * bg $WALLPAPER_PATH fill
 #
 # Example configuration:
@@ -101,6 +101,8 @@ exec swayidle -w \
 #
     # for the calculator
     bindsym XF86Calculator exec qalculate-gtk
+    # for godot main to stay and others to float...
+    for_window [app_id="Godot" title="^(?!Godot$)"] floating enable
     # Force Qalculate to float, center, and resize
     for_window [app_id="qalculate-gtk"] floating enable, move position center, resize set 600 px 400 px
     # Force renaming in thuar to float, center and resize  
@@ -108,6 +110,10 @@ exec swayidle -w \
     for_window [app_id="thunar" title="Bulk Rename"] floating enable
     for_window [app_id="thunar" title=".*Progress.*"] floating enable
     for_window [app_id="thunar" title=".*Confirm.*"] floating enable
+    # for media playback control  
+    bindsym XF86AudioPrev exec playerctl previous   
+    bindsym XF86AudioPlay exec playerctl play-pause   
+    bindsym XF86AudioNext exec playerctl next   
     # for swiping across workspaces  
     bindsym --whole-window $mod+button4 workspace prev  
     bindsym --whole-window $mod+button5 workspace next  
